@@ -13,6 +13,8 @@ namespace Web_Service
             var cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
 
+            //config.EnableCors(new EnableCorsAttribute("http://localhost:1188", "*", "*"));
+
             config.Routes.MapHttpRoute(
                name: "ActionApi",
                routeTemplate: "api/{controller}/{action}/{id}"
